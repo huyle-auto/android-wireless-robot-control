@@ -30,12 +30,11 @@ This project aims to modernize robot control systems by leveraging the Android e
 
 Manual testing is currently used to verify key robot control flows, connectivity, and error handling.
 
-## Screenshots
+## 📸 Screenshots
 
 | Jog | Program List | Program Edit | Settings |
-|------|--------|----------|
-| ![Jog Screen](screenshots/jog.png) | ![Program List Screen](screenshots/program_list.png) | ![Program Edit Screen](screenshots/program_edit.png) | ![Settings Screen] |(screenshots/connection_settings.png) |
-
+|------|--------------|--------------|----------|
+| ![Jog Screen](screenshots/jog.png) | ![Program List Screen](screenshots/program_list.png) | ![Program Edit Screen](screenshots/program_edit.png) | ![Settings Screen](screenshots/connection_settings.png) |
 
 ## Getting Started
 
