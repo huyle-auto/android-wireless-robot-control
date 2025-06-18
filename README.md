@@ -43,7 +43,7 @@ Manual testing is currently used to verify key robot control flows, connectivity
 - Android Studio Giraffe or later
 - Gradle 8+
 - Android SDK 24+
-- Physical or emulated Android device (tablet with Android 24+ is preferable)
+- Physical or emulated Android device (tablet with Android 7.0 and above is preferable)
 - May require extra Android permissions in use
 
 ### Installation
