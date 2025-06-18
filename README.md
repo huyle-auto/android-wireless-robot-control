@@ -34,7 +34,7 @@ Manual testing is currently used to verify key robot control flows, connectivity
 
 | Home | Detail | Settings |
 |------|--------|----------|
-| ![Home Screen](screenshots/home.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
+| ![Jog Screen](screenshots/jog.png) | ![Program List Screen](screenshots/program_list.png) | ![Program Edit Screen](screenshots/program_edit.png) | ![Settings Screen] |(screenshots/connection_settings.png) |
 
 
 ## Getting Started
@@ -58,4 +58,8 @@ Manual testing is currently used to verify key robot control flows, connectivity
 ### Author 
 
 Developed by huyle-auto
+
+## Notes
+
+This application is made specifically for VAS Robot Controller - LCXMC. While it may not work directly on Robot from other brands, you can utilize it for quick testing TCP/IP and classic Bluetooth communication (single connection per method).
 
