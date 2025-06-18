@@ -15,11 +15,11 @@ This project aims to modernize robot control systems by leveraging the Android e
 - Dual-channel communication (TCP/IP + Bluetooth)
 - Jogging and coordinate control
 - Program editing and execution
-- 🗃Local data storage with SQLite
+- Local data storage with SQLite
 - Responsive UI using Material Design
 - Designed for touch-based control tablets and phones
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language:** Java
 - **Database:** SQLite
@@ -37,7 +37,7 @@ Manual testing is currently used to verify key robot control flows, connectivity
 | ![Home Screen](screenshots/home.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
 
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
