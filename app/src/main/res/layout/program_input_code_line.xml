@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/programInputTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--    Line Index-->
+    <TextView
+        android:id="@+id/programInputIndexTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.15"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:textColor="@color/black" />
+
+    <!--    Code content-->
+    <TextView
+        android:id="@+id/programInputContentTextView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:letterSpacing="0.15"
+        android:inputType="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:cursorVisible="false"/>
+</TableRow>

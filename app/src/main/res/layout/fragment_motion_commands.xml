@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Class.CommandList.MotionCommandsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:scrollbars="vertical"
+            android:scrollbarSize="10dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:overScrollMode="always"
+            android:scrollbarTrackVertical="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General motion"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
+
+            <!-- JMOVE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/jMoveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="JMOVE"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="6dp"
+                    android:layout_weight="3"
+                    android:text="Joint interpolation from the current position to the target position"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- LMOVE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/lMoveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="LMOVE"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="6dp"
+                    android:layout_weight="3"
+                    android:text="Linear interpolation from the current position to the target position"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- AMOVE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/aMoveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="AMOVE"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="6dp"
+                    android:layout_weight="3"
+                    android:text="Arc move from the current position to the target point by pasing waypoint"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- CMOVE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/cMoveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="CMOVE"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="6dp"
+                    android:layout_weight="3"
+                    android:text="Circular interpolation passing 3 points from the current position by passing 2
+way-points"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- HOME -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/homeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="HOME"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="6dp"
+                    android:layout_weight="3"
+                    android:text="Joint interpolation from the current position to setting Home position"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

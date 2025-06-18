@@ -1,0 +1,30 @@
+MAIN M0
+WHILE 1
+JMOVE #P[0]
+JMOVE #P[1]
+JMOVE #P[2]
+JMOVE #P[3]
+ENDWL
+EOP
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

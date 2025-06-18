@@ -1,0 +1,35 @@
+{
+  "Engineer": {
+    "JogFragment": [],
+    "ProgramListFragment": [],
+    "DataFragment": [],
+    "IOFragment": [],
+    "TrackingFragment": [],
+    "MonitorFragment": [],
+    "HistoryFragment": [],
+    "SettingsFragment": [],
+    "RobotTypeFragment": []
+  },
+  "Operator": {
+    "JogFragment": ["saveAxesZeroValueButton"],
+    "ProgramListFragment": [],
+    "DataFragment": [],
+    "IOFragment": [],
+    "TrackingFragment": [],
+    "MonitorFragment": [],
+    "HistoryFragment": [],
+    "SettingsFragment": ["robotTypeButton", "devicesButton", "axisSettingButton", "motionButton", "rebootButton"],
+    "RobotTypeFragment": []
+  },
+  "Admin": {
+    "JogFragment": [],
+    "ProgramListFragment": [],
+    "DataFragment": [],
+    "IOFragment": [],
+    "TrackingFragment": [],
+    "MonitorFragment": [],
+    "HistoryFragment": [],
+    "SettingsFragment": [],
+    "RobotTypeFragment": []
+  }
+}

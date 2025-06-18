@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.MonitorFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/getRegularDataButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GET REGULAR DATA"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:backgroundTint="@color/midnight_blue"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="12dp"
+                        android:textStyle="bold"
+                        android:text="Regular Data Status: "/>
+
+                    <TextView
+                        android:id="@+id/regularDataStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="2dp"
+                        android:textStyle="bold"
+                        android:text="None"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+
+                        <!--        Ctrl Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ctrlErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Controller Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 1 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis1ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 1 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 2 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis2ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 2 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 3 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis3ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 3 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 4 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis4ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 4 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 5 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis5ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 5 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 6 Error Code-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis6ErrCode"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 6 Error Code:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!--        Axis 1 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis1Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 1 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 2 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis2Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 2 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 3 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis3Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 3 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 4 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis4Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 4 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 5 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis5Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 5 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Axis 6 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/axis6Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Axis 6 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!--        TCP x Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpXPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP X Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        TCP y Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpYPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP Y Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        TCP z Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpZPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP Z Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        TCP rX Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpRxPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP Rx Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        TCP rY Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpRyPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP Ry Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        TCP rZ Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tcpRzPos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="TCP Rz Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!--        Joint 1 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint1Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 1 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Joint 2 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint2Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 2 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Joint 3 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint3Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 3 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Joint 4 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint4Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 4 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Joint 5 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint5Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 5 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--        Joint 6 Position-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/joint6Pos"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Joint 6 Position:"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+
+</FrameLayout>

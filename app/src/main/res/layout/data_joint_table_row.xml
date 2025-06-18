@@ -1,0 +1,88 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jointTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--    No.-->
+    <TextView
+        android:id="@+id/jointIndexTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.45"
+        android:background="#4E1496BB"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:textColor="@color/black"/>
+
+    <!--    J1-->
+    <EditText
+        android:id="@+id/j1EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <!--    J2-->
+    <EditText
+        android:id="@+id/j2EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <!--    J3-->
+    <EditText
+        android:id="@+id/j3EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <!--    J4-->
+    <EditText
+        android:id="@+id/j4EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <!--    J5-->
+    <EditText
+        android:id="@+id/j5EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+
+    <!--    J6-->
+    <EditText
+        android:id="@+id/j6EditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:padding="8dp"
+        android:background="#4E1496BB"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"/>
+</TableRow>

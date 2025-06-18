@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dataFrameLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.DataFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        Tables-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <!--        Joint Point-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="Joint Point List:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <!-- Static Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:padding="8dp"
+                        android:text="No."
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J1"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J2"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J3"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J4"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J5"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="J6"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <!--            Jog Data Point Table-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/jointPointRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="150dp"
+                    android:background="@drawable/background_border_trans_norounded"
+                    android:scrollbars="vertical"/>
+
+                <!--            Interactive Buttons-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--                Add-->
+                    <Button
+                        android:id="@+id/addJointPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="ADD"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <!--                Delete-->
+                    <Button
+                        android:id="@+id/deleteJointPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="DELETE"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <!--                Go To-->
+                    <Button
+                        android:id="@+id/goToJointPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="GO TO"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!--                Add-->
+
+
+            </LinearLayout>
+            <!--        World Point-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="World Point List:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <!-- Static Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:padding="8dp"
+                        android:text="No."
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="X"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="Y"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="Z"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="RX"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="RY"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:padding="8dp"
+                        android:text="RZ"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:background="#1496BB"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <!--            World Data Point Table-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/worldPointRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="150dp"
+                    android:background="@drawable/background_border_trans_norounded"
+                    android:scrollbars="vertical"/>
+
+                <!--            Interactive Buttons-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--                Add-->
+                    <Button
+                        android:id="@+id/addWorldPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="ADD"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <!--                Delete-->
+                    <Button
+                        android:id="@+id/deleteWorldPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="DELETE"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <!--                Go To-->
+                    <Button
+                        android:id="@+id/goToWorldPointButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="GO TO"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

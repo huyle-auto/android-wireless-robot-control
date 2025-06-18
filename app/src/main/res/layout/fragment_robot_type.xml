@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.Settings.RobotTypeFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!--    Robot Type selection-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="Robot Type:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/robotTypeDropDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownSelector="@color/black"
+                        android:popupBackground="@color/white"
+
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!--    Geometry and image-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="100dp"
+                    android:orientation="horizontal">
+
+                    <TableLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:showDividers="middle"
+                        android:layout_marginEnd="80dp">
+
+                        <!-- Header Row -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Link"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textStyle="bold"
+                                android:background="#E0E0E0"
+                                android:gravity="center"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Value"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textStyle="bold"
+                                android:background="#E0E0E0"
+                                android:gravity="center"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <!-- Row 1 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L1"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_1_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:cursorVisible="false"
+                                android:inputType="none"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                        <!-- Row 2 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L2"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_2_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                        <!-- Row 3 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L3"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_3_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                        <!-- Row 4 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L4"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_4_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                        <!-- Row 5 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L5"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:padding="8dp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_5_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                        <!-- Row 6 -->
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="L6"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                            <EditText
+                                android:id="@+id/link_6_length"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <ImageView
+                        android:id="@+id/robotGeomatryImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="280dp"
+                        android:background="@drawable/geometry_scara"
+                        android:layout_marginBottom="2dp"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--            SAVE Button-->
+                    <Button
+                        android:id="@+id/saveRobotTypeConfigButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:backgroundTint="@color/lime_green"
+                        android:text="SAVE"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/sendConfigToControllerButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="SEND TO CONTROLLER"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+
+
+
+
+
+</FrameLayout>

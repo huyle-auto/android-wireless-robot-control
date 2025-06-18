@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Features.Settings.DevicesFragment">
+
+<!--    Tables-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="horizontal">
+
+        <!--        Devices Tables-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Device Library:"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/black"/>
+
+            <!-- (Header) Device -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp">
+                <!--                ID-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:padding="8dp"
+                    android:text="ID"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+                <!--                Name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:padding="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="#1496BB"
+                    android:text="NAME"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <!-- (Content) Device -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:layout_marginTop="0dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/deviceTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Content Rows -->
+<!--                    <TableRow-->
+<!--                        android:id="@+id/row1"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="true">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="0.2"-->
+<!--                            android:padding="8dp"-->
+<!--                            android:text="1"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:background="#4E1496BB"-->
+<!--                            android:textSize="10sp"-->
+<!--                            android:textColor="@color/black" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="0.8"-->
+<!--                            android:padding="8dp"-->
+<!--                            android:background="#4E1496BB"-->
+<!--                            android:text="Device Serial Number"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textSize="10sp" />-->
+<!--                    </TableRow>-->
+
+                </TableLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+<!--        Move/Remove Buttons-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp">
+
+            <!--            ADD-->
+            <Button
+                android:id="@+id/addDeviceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="\u2794"
+                android:textAlignment="center"/>
+
+            <!--            REMOVE-->
+            <Button
+                android:id="@+id/removeDeviceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="\u2794"
+                android:rotation="180"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <!--            Devices List Table-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Active Device:"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/black"/>
+
+            <!-- (Header) Active Device -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+                <!--                ID-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:padding="8dp"
+                    android:text="ID"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+                <!--                Name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:padding="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="#1496BB"
+                    android:text="NAME"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <!-- (Content) Active Device Table -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activeDeviceRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="250dp"
+                android:background="@drawable/background_border_trans_norounded"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    Custom Device + Interactive Buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="260dp"
+        android:visibility="invisible">
+
+<!--        Custom Device-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Device:"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <!--            Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customDeviceName"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:hint="Name:"
+                    android:text="XSC_ECAT_ASD04"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="10sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            Vendor ID-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customDeviceVendorID"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:hint="Vendor ID:"
+                    android:text="0x00000b9e"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="10sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            Product Code-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customDeviceProductCode"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:hint="Product Code:"
+                    android:text="0x00000005"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="10sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--            DC Assign-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customDeviceDcAssign"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:hint="DC Assign:"
+                    android:text="0x0300"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="10sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+<!--        PDO-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--        Tabs Layout-->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="600dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/background_border_trans_norounded"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextColor="@color/black"
+                app:tabIndicatorColor="#1496BB">
+
+                <!--        RxPDO-->
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RxPDO" />
+
+                <!--        TxPDO-->
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TxPDO" />
+
+                <!--        PDO-->
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PDO" />
+
+                <!--        Sync-->
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sync" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <!--            ViewPager2-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_border_trans_norounded"/>
+        </LinearLayout>
+
+
+        <!--        Interactive Buttons-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp">
+
+            <!--            Save-->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="SAVE"
+                android:textAlignment="center"/>
+            <!--            Replace-->
+            <Button
+                android:id="@+id/replaceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="REPLACE"
+                android:textAlignment="center"/>
+            <!--            Delete-->
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:text="DELETE"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

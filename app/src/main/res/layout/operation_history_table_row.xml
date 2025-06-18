@@ -1,0 +1,38 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/programTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--    Date-->
+    <TextView
+        android:id="@+id/operationTimestampTextView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="#4E1496BB"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <!--    Action-->
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:background="#4E1496BB">
+        <TextView
+            android:id="@+id/operationMessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:textAlignment="textStart"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/black"/>
+    </HorizontalScrollView>
+
+
+</TableRow>

@@ -1,0 +1,62 @@
+MAIN M0
+DOUTGROUP 0,0
+LMOVE P[0]
+DOUT 0,1
+LMOVE P[1]
+DOUT 1,1
+LMOVE P[0]
+DOUT 2,1
+EOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

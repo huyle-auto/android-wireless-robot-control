@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragments.Features.JogFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--        SAVE/MOVE TO HOME -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="Go To Home:"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/black" />
+
+                    <!--            Home Index Selection-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/moveToHome1Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HOME 1"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                        <Button
+                            android:id="@+id/moveToHome2Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HOME 2"
+                            android:layout_marginEnd="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Set Home Position (Joint):"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black" />
+
+                    <!--            Set Joint Home Position-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/saveJointHome1Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAVE AS HOME 1"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                        <Button
+                            android:id="@+id/saveJointHome2Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAVE AS HOME 2"
+                            android:layout_marginEnd="4dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                        <Button
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TOP"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/dim_gray"
+                            android:layout_marginEnd="4dp"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Set Home Position (World):"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/black"
+                        android:visibility="invisible"/>
+
+                    <!--            Set World Home Position-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <Button
+                            android:id="@+id/saveWorldHome1Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAVE AS HOME 1"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                        <Button
+                            android:id="@+id/saveWorldHome2Button"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAVE AS HOME 2"
+                            android:layout_marginEnd="4dp"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/light_slate_gray" />
+
+                        <Button
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HIGH"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="66dp"
+                            tools:layout_editor_absoluteY="520dp"
+                            android:backgroundTint="@color/dim_gray"
+                            android:layout_marginEnd="4dp"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--        Joint Jog Value-->
+                <LinearLayout
+                    android:id="@+id/jointJogLayout"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/background_border"
+                        android:padding="4dp"
+                        android:text="Joint Jog"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!--            Joint Jog Buttons & Blocker-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <!--        Joint 1-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint1_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 1:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Joint 2-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint2_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 2:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Joint 3-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint3_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 3:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Joint 4-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint4_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 4:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Joint 5-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint5_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 5:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Joint 6-->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/joint6_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Joint 6:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/manualJointJogOverlayBlocker"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:visibility="visible"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </FrameLayout>
+
+                    <!--            Save Joint Jog-->
+                    <Button
+                        android:id="@+id/saveJJ_Button"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="SAVE"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <!--            Go to Position Joint Jog-->
+                    <Button
+                        android:id="@+id/gotoJointPosButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="GO TO"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!--        Linear Jog Value-->
+                <LinearLayout
+                    android:id="@+id/linearJogLayout"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/background_border"
+                        android:padding="4dp"
+                        android:text="Linear Jog"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!--            Linear Jog Buttons & Blocker-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <!--        X -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/x_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="X:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Y -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/y_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Y:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Z -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/z_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Z:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Rx -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rX_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Rx:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Ry -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rY_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Ry:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <!--        Rz -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rZ_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Rz:"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="12sp"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:cursorVisible="false">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/manualLinearJogOverlayBlocker"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:visibility="visible"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </FrameLayout>
+
+                    <!--            Save Linear Jog-->
+                    <Button
+                        android:id="@+id/saveLJ_Button"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="SAVE"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <!--            Go to Position Linear Jog-->
+                    <Button
+                        android:id="@+id/gotoWorldPosButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="GO TO"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <!--            SAVE AXES ZERO VALUE-->
+                    <Button
+                        android:id="@+id/saveAxesZeroValueButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#1496BB"
+                        android:text="SAVE AXIS ZERO VALUE"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <!--                EDIT/LIVE MODE BUTTONS-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="Jog Mode:"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="For manual changes of position, enable EDIT MODE. \n JOG BUTTONS are disabled in EDIT MODE"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:backgroundTint="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/liveModeButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:backgroundTint="#1496BB"
+                            android:text="LIVE MODE"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/editModeButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:backgroundTint="@color/light_slate_gray"
+                            android:text="EDIT MODE"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+
+
+
+</FrameLayout>

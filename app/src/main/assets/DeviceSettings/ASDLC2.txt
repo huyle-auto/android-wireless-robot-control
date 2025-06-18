@@ -1,0 +1,32 @@
+#slave Model
+Vendor_ID : 0x00000b9e
+Product_CODE : 0x00000007
+pdo_entries :
+{0x6040, 0x00, 16, 0},
+{0x607a, 0x00, 32, 0},
+{0x60fe, 0x00, 32, 0},
+{0x60b8, 0x00, 16, 0},
+{0x6041, 0x00, 16, 0},
+{0x6064, 0x00, 32, 0},
+{0x60b9, 0x00, 16, 0},
+{0x60ba, 0x00, 32, 0},
+{0x60bc, 0x00, 32, 0},
+{0x60fd, 0x00, 32, 0},
+pdo_info :
+{0x1601, 4, 0},
+{0x1a01, 6, 4},
+sync_info :
+{0, EC_DIR_OUTPUT, 0, 0, EC_WD_DISABLE},
+{1, EC_DIR_INPUT, 0, 0, EC_WD_DISABLE},
+{2, EC_DIR_OUTPUT, 1, 0, EC_WD_ENABLE},
+{3, EC_DIR_INPUT, 1, 1, EC_WD_DISABLE},
+{0xff}
+SLAVE_TYPE_SERVO : 1
+{0,4,0,6,0}
+SLAVE_TYPE_DOUT : 0
+SLAVE_TYPE_DIN : 0
+SLAVE_TYPE_AOUT : 0
+SLAVE_TYPE_AIN : 0
+SLAVE_TYPE_COUNTER : 0
+SLAVE_TYPE_SYSTEM : 0
+DC_OPTION : 0x0000

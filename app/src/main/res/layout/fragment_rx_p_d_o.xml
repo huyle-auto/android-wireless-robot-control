@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.Settings.CustomDevices.RxPDOFragment">
+
+    <!-- Static Header Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="8dp"
+            android:text="ID"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text="Group"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text="Index"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text="SubIndex"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text="Size"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text="Role"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="#1496BB"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Scrollable Dynamic Rows with RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rxPDORecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:scrollbars="vertical" />
+</FrameLayout>

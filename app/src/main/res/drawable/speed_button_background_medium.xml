@@ -1,0 +1,30 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Black rectangle on the left half -->
+    <item android:id="@+id/back_color_1">
+        <inset android:insetRight="33.33%">
+            <shape android:shape="rectangle">
+                <solid android:color="#FF0000" />
+            </shape>
+        </inset>
+    </item>
+
+    <!-- White rectangle on the right half -->
+    <item android:id="@+id/back_color_2">
+        <inset android:insetLeft="33.33%">
+            <shape android:shape="rectangle">
+                <solid android:color="#FFEA03" />
+            </shape>
+        </inset>
+    </item>
+
+    <!-- White rectangle on the right half -->
+    <item android:id="@+id/back_color_3">
+        <inset android:insetLeft="66.66%">
+            <shape android:shape="rectangle">
+                <solid android:color="#F4F0F0" />
+            </shape>
+        </inset>
+    </item>
+</layer-list>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/button_border">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border">
+
+        <LinearLayout
+            android:layout_width="900dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#C4E8F8">
+
+            <!--                Close Button-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--            Switch Button-->
+                <Button
+                    android:id="@+id/switchToCharacterButton"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHARACTERS"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"/>
+
+                <Button
+                    android:id="@+id/switchToSymbolButton"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SYMBOLS"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    android:layout_toRightOf="@id/switchToCharacterButton"
+                    android:layout_marginStart="12dp"/>
+
+                <!-- Close Button -->
+                <Button
+                    android:id="@+id/btn_keyboard_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Close"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:backgroundTint="@color/red"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="⌫"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginStart="4dp"
+                    android:visibility="invisible"/>
+                <!-- Preview Bar -->
+                <EditText
+                    android:id="@+id/keyboard_display_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:inputType="none"/>
+
+                <Button
+                    android:id="@+id/btn_keyboard_delete"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/indian_red"
+                    android:text="BACKSPACE"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="4dp"/>
+            </LinearLayout>
+
+            <!-- Character Input View -->
+            <LinearLayout
+                android:id="@+id/characterKeyboardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#C4E8F8"
+                android:visibility="visible">
+
+                <!--            Keyboard characters-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@drawable/button_border">
+
+                    <!-- Numerical Line -->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="10"
+                        android:layout_gravity="center">
+
+                        <!-- Row 1 (Numeric) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_1"
+                            style="@style/NumpadButton"
+                            android:text="1" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_2"
+                            style="@style/NumpadButton"
+                            android:text="2" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_3"
+                            style="@style/NumpadButton"
+                            android:text="3" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_4"
+                            style="@style/NumpadButton"
+                            android:text="4" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_5"
+                            style="@style/NumpadButton"
+                            android:text="5" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_6"
+                            style="@style/NumpadButton"
+                            android:text="6" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_7"
+                            style="@style/NumpadButton"
+                            android:text="7" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_8"
+                            style="@style/NumpadButton"
+                            android:text="8" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_9"
+                            style="@style/NumpadButton"
+                            android:text="9" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_0"
+                            style="@style/NumpadButton"
+                            android:text="0" />
+
+                    </GridLayout>
+
+                    <!--                1st character line-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="11"
+                        android:layout_gravity="center">
+
+                        <!-- Row 1 (Numeric) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_q"
+                            style="@style/NumpadButton"
+                            android:text="q" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_w"
+                            style="@style/NumpadButton"
+                            android:text="w" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_e"
+                            style="@style/NumpadButton"
+                            android:text="e" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_r"
+                            style="@style/NumpadButton"
+                            android:text="r" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_t"
+                            style="@style/NumpadButton"
+                            android:text="t" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_y"
+                            style="@style/NumpadButton"
+                            android:text="y" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_u"
+                            style="@style/NumpadButton"
+                            android:text="u" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_i"
+                            style="@style/NumpadButton"
+                            android:text="i" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_o"
+                            style="@style/NumpadButton"
+                            android:text="o" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_p"
+                            style="@style/NumpadButton"
+                            android:text="p" />
+
+                    </GridLayout>
+
+                    <!--                2nd character line-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="9"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_a"
+                            style="@style/NumpadButton"
+                            android:text="a" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_s"
+                            style="@style/NumpadButton"
+                            android:text="s" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_d"
+                            style="@style/NumpadButton"
+                            android:text="d" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_f"
+                            style="@style/NumpadButton"
+                            android:text="f" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_g"
+                            style="@style/NumpadButton"
+                            android:text="g" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_h"
+                            style="@style/NumpadButton"
+                            android:text="h" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_j"
+                            style="@style/NumpadButton"
+                            android:text="j" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_k"
+                            style="@style/NumpadButton"
+                            android:text="k" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_l"
+                            style="@style/NumpadButton"
+                            android:text="l" />
+
+                    </GridLayout>
+
+                    <!--                3rd character line-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="11"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_keyboard_shift"
+                            android:layout_width="90dp"
+                            style="@style/NumpadButton"
+                            android:text="SHIFT"
+                            android:textSize="10sp"
+                            android:textColor="@android:color/holo_red_dark" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_z"
+                            style="@style/NumpadButton"
+                            android:text="z" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_x"
+                            style="@style/NumpadButton"
+                            android:text="x" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_c"
+                            style="@style/NumpadButton"
+                            android:text="c" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_v"
+                            style="@style/NumpadButton"
+                            android:text="v" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_b"
+                            style="@style/NumpadButton"
+                            android:text="b" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_n"
+                            style="@style/NumpadButton"
+                            android:text="n" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_m"
+                            style="@style/NumpadButton"
+                            android:text="m" />
+                        <Button
+                            android:id="@+id/btn_keyboard_dot"
+                            style="@style/NumpadButton"
+                            android:text="." />/>
+
+                        <Button
+                            android:id="@+id/btn_keyboard_comma"
+                            style="@style/NumpadButton"
+                            android:text="," />
+
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Symbol Input View -->
+            <LinearLayout
+                android:id="@+id/symbolKeyboardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#C4E8F8"
+                android:visibility="gone">
+
+                <!--            Symbol characters-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@drawable/button_border">
+
+                    <!-- 1st symbol Line -->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="10"
+                        android:layout_gravity="center">
+
+                        <!-- Row 1 (Numeric) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_tilde"
+                            style="@style/NumpadButton"
+                            android:text="~" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_exclamation"
+                            style="@style/NumpadButton"
+                            android:text="!" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_at"
+                            style="@style/NumpadButton"
+                            android:text="\u0040" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_hash"
+                            style="@style/NumpadButton"
+                            android:text="#" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_dollar"
+                            style="@style/NumpadButton"
+                            android:text="$" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_percent"
+                            style="@style/NumpadButton"
+                            android:text="%" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_caret"
+                            style="@style/NumpadButton"
+                            android:text="^" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_asterisk"
+                            style="@style/NumpadButton"
+                            android:text="*" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_leftParenthesis"
+                            style="@style/NumpadButton"
+                            android:text="(" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_rightParenthesis"
+                            style="@style/NumpadButton"
+                            android:text=")" />
+
+                    </GridLayout>
+
+                    <!--                2nd symbol Line-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="11"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_keyboard_ampersand"
+                            style="@style/NumpadButton"
+                            android:text="\u0026" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_apostrophe"
+                            style="@style/NumpadButton"
+                            android:text="\u0027" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_quotation"
+                            style="@style/NumpadButton"
+                            android:text="\u0022" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_verticalSlash"
+                            style="@style/NumpadButton"
+                            android:text="|" />
+
+
+                        <Button
+                            android:id="@+id/btn_keyboard_plus"
+                            style="@style/NumpadButton"
+                            android:text="+" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_minus"
+                            style="@style/NumpadButton"
+                            android:text="-" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_equal"
+                            style="@style/NumpadButton"
+                            android:text="=" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_colon"
+                            style="@style/NumpadButton"
+                            android:text=":" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_semicolon"
+                            style="@style/NumpadButton"
+                            android:text=";" />
+
+                    </GridLayout>
+
+                    <!--                3rd symbol Line-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        android:columnCount="11"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_keyboard_lessThan"
+                            style="@style/NumpadButton"
+                            android:text="\u003C" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_greaterThan"
+                            style="@style/NumpadButton"
+                            android:text="\u003E" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_questionMark"
+                            style="@style/NumpadButton"
+                            android:text="\u003F" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_slash"
+                            style="@style/NumpadButton"
+                            android:text="/" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_backLash"
+                            style="@style/NumpadButton"
+                            android:text="\u005C" />
+
+
+                        <Button
+                            android:id="@+id/btn_keyboard_underscore"
+                            style="@style/NumpadButton"
+                            android:text="_" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_leftSquareBracket"
+                            style="@style/NumpadButton"
+                            android:text="[" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_rightSquareBracket"
+                            style="@style/NumpadButton"
+                            android:text="]" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_keyboard_leftCurlyBracket"
+                            style="@style/NumpadButton"
+                            android:text="{" />
+
+                        <Button
+                            android:id="@+id/btn_keyboard_rightCurlyBracket"
+                            style="@style/NumpadButton"
+                            android:text="}" />
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--                Space bar Line-->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="1"
+                android:columnCount="1"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_keyboard_space"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="520dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#007392"
+                    android:layout_gravity="center"
+                    android:text="SPACE" />
+
+            </GridLayout>
+
+            <!-- OK and Clear Buttons at Bottom -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Clear Button -->
+                <Button
+                    android:id="@+id/btn_keyboard_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:backgroundTint="@color/red"/>
+
+                <!-- OK Button -->
+                <Button
+                    android:id="@+id/btn_keyboard_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="OK"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:backgroundTint="@color/lime_green"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
+

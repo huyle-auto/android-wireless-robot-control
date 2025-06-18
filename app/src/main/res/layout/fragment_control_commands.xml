@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Class.CommandList.ControlCommandsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:scrollbars="vertical"
+            android:scrollbarSize="10dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:overScrollMode="always"
+            android:scrollbarTrackVertical="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General control"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
+
+            <!-- MAIN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="MAIN"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set task start"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- EOP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="EOP"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set task termination"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- EXIT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="EXIT"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set task stop"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- TRUN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="TRUN"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Run the task"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- TSTOP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="TSTOP"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Stop the task"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- FUNC -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="FUNC"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set user function startup"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- ENDF -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="ENDF"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set user function exit"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- EXITF -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="EXITF"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1496BB"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Set user function stop"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

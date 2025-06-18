@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragments.Features.Settings.SpeedFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Set Speed Levels (in percentage)"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="4dp"/>
+                </LinearLayout>
+
+                <!--        Slider and Edit Texts-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="120dp">
+
+                    <!--        Low-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/lowSpeedValueSlider"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.7"
+                            android:valueFrom="0"
+                            android:valueTo="100"
+                            android:value="30"
+                            android:stepSize="1"
+                            android:layout_marginEnd="12dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:layout_marginEnd="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lowSpeedValueEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Low Speed (%):"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--        Medium-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/mediumSpeedValueSlider"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.7"
+                            android:valueFrom="0"
+                            android:valueTo="100"
+                            android:value="50"
+                            android:stepSize="1"
+                            android:layout_marginEnd="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:layout_marginEnd="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/mediumSpeedValueEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Medium Speed (%):"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!--        High-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/highSpeedValueSlider"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.7"
+                            android:valueFrom="0"
+                            android:valueTo="100"
+                            android:value="70"
+                            android:stepSize="1"
+                            android:layout_marginEnd="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:layout_marginEnd="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/highSpeedValueEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="High Speed (%):"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--        Top-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/topSpeedValueSlider"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.7"
+                            android:valueFrom="0"
+                            android:valueTo="100"
+                            android:value="100"
+                            android:stepSize="1"
+                            android:layout_marginEnd="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:layout_marginEnd="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/topSpeedValueEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Top Speed (%):"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="10sp"
+                                android:inputType="none"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:cursorVisible="false">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+
+</FrameLayout>

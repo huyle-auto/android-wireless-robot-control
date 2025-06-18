@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SlaveModel>
+    <VendorID>0x00000B9E</VendorID>
+
+    <ProductCode>0x00000005</ProductCode>
+
+    <PDOEntries>
+        <RxPDO>
+            <Entry0>
+                <Group>SV0</Group>
+                <Index>0x6040</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>16</Size>
+                <Role>DEFAULT</Role>
+            </Entry0>
+
+            <Entry1>
+                <Group>SV0</Group>
+                <Index>0x607a</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry1>
+
+            <Entry2>
+                <Group>SV0</Group>
+                <Index>0x60fe</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry2>
+
+            <Entry3>
+                <Group>SV0</Group>
+                <Index>0x60b8</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>16</Size>
+                <Role>DEFAULT</Role>
+            </Entry3>
+
+        </RxPDO>
+        <TxPDO>
+            <Entry0>
+                <Group>SV0</Group>
+                <Index>0x6041</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>16</Size>
+                <Role>DEFAULT</Role>
+            </Entry0>
+
+            <Entry1>
+                <Group>SV0</Group>
+                <Index>0x6064</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry1>
+
+            <Entry2>
+                <Group>SV0</Group>
+                <Index>0x60b9</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>16</Size>
+                <Role>DEFAULT</Role>
+            </Entry2>
+
+            <Entry3>
+                <Group>SV0</Group>
+                <Index>0x60ba</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry3>
+
+            <Entry4>
+                <Group>SV0</Group>
+                <Index>0x60bc</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry4>
+
+            <Entry5>
+                <Group>SV0</Group>
+                <Index>0x60fd</Index>
+                <SubIndex>0x00</SubIndex>
+                <Size>32</Size>
+                <Role>DEFAULT</Role>
+            </Entry5>
+        </TxPDO>
+        <PDO>
+            <Entry0>
+                <Index>0x1601</Index>
+                <Size>4</Size>
+                <Start>0</Start>
+            </Entry0>
+
+            <Entry1>
+                <Index>0x1a01</Index>
+                <Size>6</Size>
+                <Start>4</Start>
+            </Entry1>
+        </PDO>
+        <Sync>
+            <Entry0>
+                <Direction>EC_DIR_OUTPUT</Direction>
+                <Size>0</Size>
+                <Start>0</Start>
+                <Watchdog>EC_WD_DISABLE</Watchdog>
+            </Entry0>
+
+            <Entry1>
+                <Direction>EC_DIR_INPUT</Direction>
+                <Size>0</Size>
+                <Start>0</Start>
+                <Watchdog>EC_WD_DISABLE</Watchdog>
+            </Entry1>
+
+            <Entry2>
+                <Direction>EC_DIR_INPUT</Direction>
+                <Size>1</Size>
+                <Start>0</Start>
+                <Watchdog>EC_WD_ENABLE</Watchdog>
+            </Entry2>
+
+            <Entry3>
+                <Direction>EC_DIR_INPUT</Direction>
+                <Size>1</Size>
+                <Start>1</Start>
+                <Watchdog>EC_WD_DISABLE</Watchdog>
+            </Entry3>
+
+            <Entry0xff>
+
+            </Entry0xff>
+        </Sync>
+    </PDOEntries>
+
+    <DeviceType>
+        <SLAVE_TYPE_SERVO>
+            <value>1</value>
+        </SLAVE_TYPE_SERVO>
+
+        <SLAVE_TYPE_DIN>
+            <value>0</value>
+        </SLAVE_TYPE_DIN>
+
+        <SLAVE_TYPE_DOUT>
+            <value>0</value>
+        </SLAVE_TYPE_DOUT>
+
+        <SLAVE_TYPE_AIN>
+            <value>0</value>
+        </SLAVE_TYPE_AIN>
+
+        <SLAVE_TYPE_AOUT>
+            <value>0</value>
+        </SLAVE_TYPE_AOUT>
+
+        <SLAVE_TYPE_COUNTER>
+            <value>0</value>
+        </SLAVE_TYPE_COUNTER>
+
+        <SLAVE_TYPE_SYSTEM>
+            <value>0</value>
+        </SLAVE_TYPE_SYSTEM>
+    </DeviceType>
+
+    <DCOption>0x300</DCOption>
+</SlaveModel>

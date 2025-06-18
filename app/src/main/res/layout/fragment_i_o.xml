@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    tools:context=".Fragments.Features.IOFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--        Switching button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal">
+
+            <!--        DIGITAL INPUT-->
+            <Button
+                android:id="@+id/digitalInputButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.7"
+                android:backgroundTint="#A9A9A9"
+                android:text="DIGITAL INPUT"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--        DIGITAL OUTPUT-->
+            <Button
+                android:id="@+id/digitalOutputButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.7"
+                android:backgroundTint="#A9A9A9"
+                android:text="DIGITAL OUTPUT"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--        ANALOG INPUT-->
+            <Button
+                android:id="@+id/analogInputButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.7"
+                android:backgroundTint="#A9A9A9"
+                android:text="ANALOG INPUT"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:visibility="invisible"/>
+
+            <!--        ANALOG OUTPUT-->
+            <Button
+                android:id="@+id/analogOutputButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="0.7"
+                android:backgroundTint="#A9A9A9"
+                android:text="ANALOG OUTPUT"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <!--        Fragments-->
+        <FrameLayout
+            android:id="@+id/ioFrameLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

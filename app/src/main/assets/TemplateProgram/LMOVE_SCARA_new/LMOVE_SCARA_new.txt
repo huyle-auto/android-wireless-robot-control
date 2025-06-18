@@ -1,0 +1,52 @@
+INT N
+INT I
+MAIN M0
+WHILE 1
+IF (N<=60) THEN
+N = N + 20
+DOUT I,1
+I = I + 1
+ELSE
+N = 20
+I = 0
+DOUTGROUP 0,0
+ENDIF
+SPEED N
+LMOVE P[0]
+SPEED N
+LMOVE P[1]
+SPEED N
+LMOVE P[0]
+SPEED N
+LMOVE P[3]
+SPEED N
+LMOVE P[2]
+SPEED N
+LMOVE P[3]
+ENDWL
+EOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

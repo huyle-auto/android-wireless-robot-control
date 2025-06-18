@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".Class.IO.DigitalInputFragment">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--        Left panel-->
+                <GridLayout
+                    android:id="@+id/diGridLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="10"
+                    android:rowCount="11">
+
+                    <!--            Group (Text)-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Group"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Inputs (Text)-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="Inputs"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Status (Bits) (Text)-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnSpan="8"
+                        android:layout_gravity="center"
+                        android:text="Status (bits)"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Empty (Text)-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 7-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="7"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 6-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="6"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 5-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 4-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 3-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 2-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 1-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Bit 0-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!--            Content Row 1-->
+                    <CheckBox
+                        android:id="@+id/DI_group01_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="01"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="1-8"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group01_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 2-->
+                    <CheckBox
+                        android:id="@+id/DI_group02_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="02"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="9-16"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group02_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 3-->
+                    <CheckBox
+                        android:id="@+id/DI_group03_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="03"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="17-24"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group03_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 4-->
+                    <CheckBox
+                        android:id="@+id/DI_group04_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="04"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="25-32"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group04_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 5-->
+                    <CheckBox
+                        android:id="@+id/DI_group05_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="05"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="33-40"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group05_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 6-->
+                    <CheckBox
+                        android:id="@+id/DI_group06_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="06"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="41-48"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group06_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 7-->
+                    <CheckBox
+                        android:id="@+id/DI_group07_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="07"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="49-56"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group07_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 8-->
+                    <CheckBox
+                        android:id="@+id/DI_group08_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="08"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="57-64"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group08_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 9-->
+                    <CheckBox
+                        android:id="@+id/DI_group09_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="09"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="65-72"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group09_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!--            Content Row 10-->
+                    <CheckBox
+                        android:id="@+id/DI_group10_CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:text="73-80"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+
+                    <!-- Circle views -->
+                    <ImageView
+                        android:id="@+id/DI_group10_Bit0"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/circle" />
+                </GridLayout>
+
+                <!--        Right panel-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                    <!--            GROUP CHOSEN + VALUE (DEC)-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--            Group chosen (Text)-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GROUP:"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <!--            Value (Dec)-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="VALUE (DEC):"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!--            INPUT RANGE + VALUE (DEC)-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <!--            Input Range (Text)-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INPUT:"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <!--            Value (Dec) -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="VALUE (HEX):"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!--            Input-->
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="24dp"
+                            android:columnCount="1"
+                            android:rowCount="9">
+                            <!--            Content Row 1-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Input"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="01"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="02"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="03"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="04"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="05"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="06"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="07"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+                            <TextView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:text="08"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"/>
+
+
+                        </GridLayout>
+
+                        <!--            Status-->
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="24dp"
+                            android:columnCount="1"
+                            android:rowCount="9">
+                            <!--            Content Row 1-->
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="4dp"/>
+
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_1"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_2"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_3"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_4"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_5"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_6"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_7"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp"/>
+
+                            <!-- Circle views -->
+                            <ImageView
+                                android:id="@+id/DI_status_8"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/circle"
+                                android:layout_marginBottom="8dp" />
+                        </GridLayout>
+
+                        <!--            Name-->
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginStart="32dp"
+                            android:columnCount="1"
+                            android:rowCount="9">
+                            <!--            Content Row 1-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_1"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_2"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_3"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_4"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_5"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_6"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_7"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                            <EditText
+                                android:id="@+id/DI_Name_8"
+                                android:layout_width="90dp"
+                                android:layout_height="24dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edittext_background"/>
+
+                        </GridLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+</FrameLayout>

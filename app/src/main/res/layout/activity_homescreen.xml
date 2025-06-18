@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7E5E5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    tools:context=".HomeScreenActivity">
+
+    <!--    General Buttons-->
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="4dp">
+
+        <!--        COORDINATE-->
+        <Button
+            android:id="@+id/coordinateButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1496BB"
+            android:text="JOINT"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--        Speed -->
+        <Button
+            android:id="@+id/speedButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1496BB"
+            android:text="LOW SPEED"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--        Reset Errors -->
+        <Button
+            android:id="@+id/resetErrorButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1496BB"
+            android:text="RESET ERROR"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--        servo ON-->
+        <Button
+            android:id="@+id/servoButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1496BB"
+            android:text="SERVO OFF"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <!--        Teaching/Automatic Mode-->
+        <Button
+            android:id="@+id/modeButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1496BB"
+            android:text="AUTO"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!--    Tab Switching Buttons + Contents-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_border"
+            android:orientation="horizontal">
+
+            <!--            Jog Button-->
+            <Button
+                android:id="@+id/jogButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="@string/jog"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <!--            Program Button-->
+            <Button
+                android:id="@+id/programButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="@string/program"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <!--            Data Button-->
+            <Button
+                android:id="@+id/dataButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="DATA"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--            IO Button-->
+            <Button
+                android:id="@+id/ioButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="I/O"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--            Tracking Button-->
+            <Button
+                android:id="@+id/trackingButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="TRACKING"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--            Monitor Button-->
+            <Button
+                android:id="@+id/monitorButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="Monitor"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--            History Button-->
+            <Button
+                android:id="@+id/historyButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="HISTORY"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <!--            Settings Button-->
+            <Button
+                android:id="@+id/settingsButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!--        Fragment Container (Application Contents)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--            Fragment container-->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <!--        Jog Buttons-->
+                <LinearLayout
+                    android:id="@+id/jogButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/jog_bg_border"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="4dp"
+                    android:visibility="visible">
+                    <!--                J1-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j1_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J1_Increase"
+                            android:text="J1+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j1_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J1_Decrease"
+                            android:text="J1-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--                J2-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j2_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J2_Increase"
+                            android:text="J2+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j2_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J2_Decrease"
+                            android:text="J2-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--                J3-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j3_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J3_Increase"
+                            android:text="J3+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j3_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J3_Decrease"
+                            android:text="J3-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!--                J4-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j4_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J4_Increase"
+                            android:text="J4+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j4_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J4_Decrease"
+                            android:text="J4-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--                J5-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j5_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J5_Increase"
+                            android:text="J5+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j5_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J5_Decrease"
+                            android:text="J5-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--                J6-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingVertical="2dp">
+
+                        <Button
+                            android:id="@+id/j6_IncButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J6_Increase"
+                            android:text="J6+"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/j6_DecButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:tag="J6_Decrease"
+                            android:text="J6-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--        Overlay blocker-->
+                <View
+                    android:id="@+id/jogOverlayBlocker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <!--        Expand/Collapse Jog buttons-->
+                <Button
+                    android:id="@+id/toggleJogLayoutButton"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="▶"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="#E7E5E5"
+                    android:layout_gravity="start|center_vertical" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

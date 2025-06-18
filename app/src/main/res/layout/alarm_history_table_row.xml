@@ -1,0 +1,65 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/programTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--    Date-->
+    <TextView
+        android:id="@+id/alarmDateTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:background="#4E1496BB"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!--    Code-->
+    <TextView
+        android:id="@+id/alarmCodeTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:background="#4E1496BB"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!--    Sub-Code-->
+    <TextView
+        android:id="@+id/alarmSubCodeTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:background="#4E1496BB"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!--    Action-->
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.55"
+        android:background="#4E1496BB">
+
+        <TextView
+            android:id="@+id/alarmActionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </HorizontalScrollView>
+
+
+</TableRow>

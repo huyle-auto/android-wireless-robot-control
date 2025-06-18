@@ -1,0 +1,113 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/button_border">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog Title"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Hint Icon + TextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/dialogIconImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/dialogHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="140dp"
+            android:layout_gravity="center"
+            android:singleLine="false"
+            android:ellipsize="none"
+            android:minLines="1"
+            android:maxLines="15"
+            android:text="Please enter your details below:"
+            android:textSize="10sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+    <!-- First EditText -->
+    <EditText
+
+        android:id="@+id/dialogFirstInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Input"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:inputType="text"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp" />
+
+    <!-- Second EditText -->
+    <EditText
+        android:id="@+id/dialogSecondInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Second Input"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:inputType="text"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp"/>
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!--                New Program-->
+        <Button
+            android:id="@+id/dialogCancelButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="30dp"/>
+
+        <!-- OK Button -->
+        <Button
+            android:id="@+id/dialogConfirmButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK"
+            android:backgroundTint="@color/lime_green"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"/>
+    </LinearLayout>
+</LinearLayout>

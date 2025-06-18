@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="4dp"
+    tools:context=".Fragments.Features.Settings.AxisSettingFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--        Robot Axis Count-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Robot Axis Count: "
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/robotAxisCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Buttons container -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="4dp">
+
+                        <!-- Up Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/axisIncButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_up"
+                            android:contentDescription="Increase Axis Count" />
+
+                        <!-- Down Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/axisDecButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_down"
+                            android:contentDescription="Decrease Axis Count" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Static Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="ID"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="AXIS"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="PPR"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="RPM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="MAX RPM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="GEAR NUME."
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="GEAR DENO."
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="ACC. TIME"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="MACC. TIME"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="P. LIMIT"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="N. LIMIT"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="M. SPEED"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="#1496BB"
+                        android:padding="8dp"
+                        android:text="S-ON MODE"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--        Axis 1-->
+                <TableRow
+                    android:id="@+id/axis_1_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Axis 2-->
+                <TableRow
+                    android:id="@+id/axis_2_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Axis 3-->
+                <TableRow
+                    android:id="@+id/axis_3_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="3"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Axis 4-->
+                <TableRow
+                    android:id="@+id/axis_4_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Axis 5-->
+                <TableRow
+                    android:id="@+id/axis_5_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="5"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Axis 6-->
+                <TableRow
+                    android:id="@+id/axis_6_Setting_TableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:text="6"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:background="#4E1496BB"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!--        Input Module Count-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Input (Module) Count: "
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/inputModuleCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Buttons container -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="4dp">
+
+                        <!-- Up Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/inputIncButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_up"
+                            android:contentDescription="Increase Axis Count" />
+
+                        <!-- Down Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/inputDecButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_down"
+                            android:contentDescription="Decrease Axis Count" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--        Output Module Count-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Output (Module) Count: "
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/outputModuleCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Buttons container -->
+                    <LinearLayout
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Up Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/outputIncButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_up"
+                            android:contentDescription="Increase Axis Count" />
+
+                        <!-- Down Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/outputDecButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_down"
+                            android:contentDescription="Decrease Axis Count" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!--        Counter Module Count-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Counter (Module) Count: "
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/counterModuleCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Buttons container -->
+                    <LinearLayout
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Up Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/counterIncButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_up"
+                            android:contentDescription="Increase Axis Count" />
+
+                        <!-- Down Arrow Button -->
+                        <ImageButton
+                            android:id="@+id/counterDecButton"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_down"
+                            android:contentDescription="Decrease Axis Count" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+
+</FrameLayout>

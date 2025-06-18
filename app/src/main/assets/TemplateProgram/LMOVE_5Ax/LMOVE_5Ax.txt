@@ -1,0 +1,14 @@
+MAIN M0
+WHILE 1
+LMOVE P[1]
+LMOVE P[2]
+LMOVE P[3]
+LMOVE P[4]
+ENDWL
+EOP
+
+
+
+
+
+

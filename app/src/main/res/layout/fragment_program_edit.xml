@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/programInputFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.ProgramFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--        Program Edit Buttons-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="Program name:"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/programName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Your program name here..."
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:inputType="textNoSuggestions"/>
+
+                        <TextView
+                            android:id="@+id/programStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="Status:"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!--            RUN-->
+                    <Button
+                        android:id="@+id/insertLineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\uFF0B"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <!--            UNDO-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u21B6"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <!--            REDO-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u21B7"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <!--            CUT-->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u2702"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <!--            UP-->
+                    <Button
+                        android:id="@+id/upLineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u2191"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <!--            DOWN-->
+                    <Button
+                        android:id="@+id/downLineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u2193"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <!--            DELETE-->
+                    <Button
+                        android:id="@+id/deleteLineButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00000000"
+                        android:fontFamily="@font/lato_light"
+                        android:text="\u00D7"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <!--    Program input + Function Selection-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="325dp"
+                    android:orientation="horizontal">
+
+                    <!--            Program List Table-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/programInputRecyclerView"
+                        android:layout_width="360dp"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/powder_blue"
+                        android:elevation="8dp"
+                        android:scrollbars="vertical" />
+
+                    <!--        Function Selection-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="@color/powder_blue"
+                        android:elevation="8dp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/commandListFrameLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/switchBackCommandListButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="0.3"
+                                android:backgroundTint="@color/white"
+                                android:text="\u003C"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:id="@+id/firstCommandListButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="0.7"
+                                android:backgroundTint="@color/white"
+                                android:text="MOTION"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/secondCommandListButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="0.7"
+                                android:backgroundTint="@color/white"
+                                android:text="I/O"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/thirdCommandListButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="0.7"
+                                android:backgroundTint="@color/white"
+                                android:text="CONTROL"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/switchForwardCommandListButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:backgroundTint="@color/white"
+                                android:text="\u003E"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--        Code Preview Bar + RUN/STOP program-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--            PREVIEW BAR-->
+                        <EditText
+                            android:id="@+id/programInputBuffer"
+                            android:layout_width="360dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/background_border_trans_norounded"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="13sp" />
+
+                        <!--            COMPILE-->
+                        <Button
+                            android:id="@+id/compileButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:text="COMPILE"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <!--            START PROGRAM-->
+                        <Button
+                            android:id="@+id/runProgramButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/lime_green"
+                            android:text="RUN"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <!--            STOP PROGRAM-->
+                        <Button
+                            android:id="@+id/stopProgramButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/red"
+                            android:text="STOP"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!--        Load/Save Program-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+                        <!--            SAVE PROGRAM-->
+                        <Button
+                            android:id="@+id/saveToDeviceButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:backgroundTint="#1496BB"
+                            android:text="SAVE"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                        <!--            SEND PROGRAM TO CONTROLLER-->
+                        <Button
+                            android:id="@+id/sendToControllerButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#1496BB"
+                            android:text="SEND TO CONTROLLER"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/backToProgramListButton"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:backgroundTint="@color/white"
+                            android:text="BACK"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <!--                COMPILE STATUS-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Compile Result: "
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/programCompileStatusTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:hint="Program not compiled"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <!--                PROGRAM STATUS-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Program Status: "
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/programRunningStatusTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:hint="Program is not running"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/newFormatToggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Format"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:layout_marginStart="12dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+
+</FrameLayout>

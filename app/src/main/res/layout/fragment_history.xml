@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Features.HistoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <!--        Operation History Table-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Operation History:"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold"/>
+            <!-- Static Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Date"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:padding="8dp"
+                    android:text="Action"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!--            History Log Table-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/operationHistoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/background_border_trans_norounded"/>
+
+        </LinearLayout>
+
+        <!--        Alarm History Table-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="Alarm History:"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold"/>
+            <!-- Static Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:padding="8dp"
+                    android:text="Date"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:padding="8dp"
+                    android:text="Code"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:padding="8dp"
+                    android:text="Sub-code"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:padding="8dp"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#1496BB"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!--            History Log Table-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alarmHistoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/background_border_trans_norounded"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

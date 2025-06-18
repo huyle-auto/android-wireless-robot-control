@@ -1,0 +1,61 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/programTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--    Program Name-->
+    <TextView
+        android:id="@+id/programNameEditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:background="#4E1496BB"
+        android:padding="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <!--    Tag-->
+    <TextView
+        android:id="@+id/tagEditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:background="#4E1496BB"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <!--    Timestamp-->
+    <TextView
+        android:id="@+id/timeStampEditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:background="#4E1496BB"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <!--    Attribute-->
+    <TextView
+        android:id="@+id/attributeEditText"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:background="#4E1496BB"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+</TableRow>
