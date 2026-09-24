@@ -2,6 +2,11 @@
 
 An Android application that replicates the core functionality of traditional industrial robot teach pendants — with added flexibility, wireless communication, and modern UI — enabling scalable, low-cost deployment and easy updates.
 
+## Videos
+
+[![Jog](https://img.youtube.com/vi/YfzOKVZsE4uY/0.jpg)](https://www.youtube.com/watch?v=fzOKVZsE4uY)
+
+
 ## Overview
 
 This project aims to modernize robot control systems by leveraging the Android ecosystem. Designed as a teach pendant alternative, the app includes all essential features found in conventional robot controllers, while adding:
