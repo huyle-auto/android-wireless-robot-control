@@ -4,8 +4,12 @@ An Android application that replicates the core functionality of traditional ind
 
 ## Videos
 
-[![Jog](https://img.youtube.com/vi/YfzOKVZsE4uY/0.jpg)](https://www.youtube.com/watch?v=fzOKVZsE4uY)
+[Overview](https://www.youtube.com/watch?v=opwTQFW7v8A)
+[Overview 2](https://www.youtube.com/watch?v=HIvj129u9Ac)
 
+[Jog](https://www.youtube.com/watch?v=Kjqdw_jZeL4)
+[Jog 2](https://www.youtube.com/watch?v=fzOKVZsE4uY)
+[I/O](https://www.youtube.com/watch?v=kiKKtas5aSk)
 
 ## Overview
 
